@@ -4,7 +4,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col items-center justify-between lg:flex-row">
+    <section className="relative flex flex-col items-center justify-between lg:flex-row">
       <div className="mt-24 flex flex-col lg:mt-0">
         <div>
           <small className="text-sm">Hello, I am</small>
@@ -42,7 +42,7 @@ const Hero = () => {
       <div className="absolute bottom-[-5rem] left-[50%] flex h-12 w-6 justify-center rounded-full border-2 border-blue-900 py-1">
         <div className="h-4 w-4 rounded-full bg-blue-900"></div>
       </div>
-    </div>
+    </section>
   );
 };
 

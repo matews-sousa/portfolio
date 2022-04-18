@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
 import { Menu, Transition } from "@headlessui/react";
+import Link from "next/link";
 
 const MobileMenu = () => {
   return (
@@ -23,46 +24,54 @@ const MobileMenu = () => {
             <Menu.Items className="mb-2 flex flex-col space-y-4 text-center">
               <Menu.Item>
                 {({ active }) => (
-                  <a
-                    className={`cursor-pointer rounded-md  p-1 shadow-md ${
-                      active ? "bg-neutral-700" : "bg-neutral-800"
-                    }`}
-                  >
-                    home
-                  </a>
+                  <Link href="/#home">
+                    <a
+                      className={`cursor-pointer rounded-md  p-1 shadow-md ${
+                        active ? "bg-neutral-700" : "bg-neutral-800"
+                      }`}
+                    >
+                      home
+                    </a>
+                  </Link>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <a
-                    className={`cursor-pointer rounded-md  p-1 shadow-md ${
-                      active ? "bg-neutral-700" : "bg-neutral-800"
-                    }`}
-                  >
-                    about me
-                  </a>
+                  <Link href="/#about-me">
+                    <a
+                      className={`cursor-pointer rounded-md  p-1 shadow-md ${
+                        active ? "bg-neutral-700" : "bg-neutral-800"
+                      }`}
+                    >
+                      about me
+                    </a>
+                  </Link>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <a
-                    className={`cursor-pointer rounded-md  p-1 shadow-md ${
-                      active ? "bg-neutral-700" : "bg-neutral-800"
-                    }`}
-                  >
-                    projects
-                  </a>
+                  <Link href="/#projects">
+                    <a
+                      className={`cursor-pointer rounded-md  p-1 shadow-md ${
+                        active ? "bg-neutral-700" : "bg-neutral-800"
+                      }`}
+                    >
+                      projects
+                    </a>
+                  </Link>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <a
-                    className={`cursor-pointer rounded-md  p-1 shadow-md ${
-                      active ? "bg-neutral-700" : "bg-neutral-800"
-                    }`}
-                  >
-                    contact
-                  </a>
+                  <Link href="/#contact">
+                    <a
+                      className={`cursor-pointer rounded-md  p-1 shadow-md ${
+                        active ? "bg-neutral-700" : "bg-neutral-800"
+                      }`}
+                    >
+                      contact
+                    </a>
+                  </Link>
                 )}
               </Menu.Item>
             </Menu.Items>

@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMe = () => {
   return (
-    <section className="-rotate-1 bg-neutral-800 p-6 shadow-md">
+    <section className="-rotate-1 bg-neutral-800 p-6 shadow-md" id="about-me">
       <div className="rotate-1">
         <h2 className="text-center text-2xl font-semibold">About me</h2>
         <div className="grid items-center md:grid-cols-2">
