@@ -1,35 +1,74 @@
 import React from "react";
-import { DiHtml5, DiCss3, DiJavascript, DiReact, DiGit } from "react-icons/di";
-import { SiNextdotjs } from "react-icons/si";
+import { DiHtml5, DiCss3, DiReact, DiGit } from "react-icons/di";
+import {
+  SiNextdotjs,
+  SiStyledcomponents,
+  SiChakraui,
+  SiPrisma,
+  SiMysql,
+} from "react-icons/si";
+import { IoLogoJavascript } from "react-icons/io";
 
 const Skills = () => {
   return (
     <section className="">
-      <h2 className="mb-12 text-center text-2xl font-semibold">Skills</h2>
-      <div className="flex flex-wrap justify-center gap-12">
-        <div className="flex flex-col items-center">
-          <DiHtml5 className="h-24 w-24 text-blue-500" />
-          <p>HTML5</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <DiCss3 className="h-24 w-24 text-blue-500" />
-          <p>CSS3</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <DiJavascript className="h-24 w-24 text-blue-500" />
-          <p>Javascript</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <DiReact className="h-24 w-24 text-blue-500" />
-          <p>React.js</p>
-        </div>
-        <div className="flex flex-col items-center ">
-          <DiGit className="h-24 w-24 text-blue-500" />
-          <p>Git</p>
-        </div>
+      <div className="mb-6 flex items-center gap-2">
+        <h2 className="text-3xl font-semibold">skills</h2>
+        <div className="h-1 w-full bg-blue-500"></div>
+      </div>
+      <div className="flex flex-wrap items-center justify-center gap-12">
+        {skills.map((skill) => (
+          <div className="flex flex-col items-center" key={skill.name}>
+            {skill.icon}
+            <p>{skill.name}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
 export default Skills;
+
+const skills = [
+  {
+    icon: <DiHtml5 className="tech-icon" />,
+    name: "HTML5",
+  },
+  {
+    icon: <DiCss3 className="tech-icon" />,
+    name: "CSS3",
+  },
+  {
+    icon: <IoLogoJavascript className="tech-icon" />,
+    name: "Javascript",
+  },
+  {
+    icon: <DiReact className="tech-icon" />,
+    name: "React.js",
+  },
+  {
+    icon: <SiNextdotjs className="tech-icon h-24 w-24" />,
+    name: "Next.js",
+  },
+  {
+    icon: <SiStyledcomponents className="tech-icon" />,
+    name: "styled-components",
+  },
+  {
+    icon: <SiChakraui className="tech-icon" />,
+    name: "ChakraUI",
+  },
+  {
+    icon: <SiPrisma className="tech-icon" />,
+    name: "Prisma",
+  },
+  {
+    icon: <SiMysql className="tech-icon" />,
+    name: "MySQL",
+  },
+  {
+    icon: <DiGit className="tech-icon" />,
+    name: "Git",
+  },
+];

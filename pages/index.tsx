@@ -19,11 +19,9 @@ const Home: NextPage<Props> = ({ projects }) => {
         <title>Mateus Sousa</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="space-y-48">
+      <main className="space-y-28">
         <Hero />
-        <div className="px-1">
-          <AboutMe />
-        </div>
+        <AboutMe />
         <Skills />
         <Projects projects={projects} />
       </main>
