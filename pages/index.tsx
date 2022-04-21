@@ -19,7 +19,7 @@ const Home: NextPage<Props> = ({ projects }) => {
         <title>Mateus Sousa</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="space-y-28">
+      <main>
         <Hero />
         <AboutMe />
         <Skills />

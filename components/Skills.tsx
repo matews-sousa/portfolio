@@ -8,10 +8,11 @@ import {
   SiMysql,
 } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
+import SectionContainer from "./SectionContainer";
 
 const Skills = () => {
   return (
-    <section className="">
+    <SectionContainer>
       <div className="mb-6 flex items-center gap-2">
         <h2 className="text-3xl font-semibold">skills</h2>
         <div className="h-1 w-full bg-blue-500"></div>
@@ -24,7 +25,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-    </section>
+    </SectionContainer>
   );
 };
 
