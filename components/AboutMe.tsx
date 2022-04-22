@@ -3,11 +3,7 @@ import SectionContainer from "./SectionContainer";
 
 const AboutMe = () => {
   return (
-    <SectionContainer id="about-me">
-      <div className="mb-6 flex items-center gap-2">
-        <h2 className="text-3xl font-semibold">about me</h2>
-        <div className="h-1 flex-1 bg-blue-500"></div>
-      </div>
+    <SectionContainer id="about-me" title="about me">
       <div className="grid items-center md:grid-cols-2">
         <div className="hidden md:block">
           <img src="/img/aboutme.svg" alt="Glasses above a book" />

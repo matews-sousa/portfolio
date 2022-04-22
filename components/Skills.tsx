@@ -12,11 +12,7 @@ import SectionContainer from "./SectionContainer";
 
 const Skills = () => {
   return (
-    <SectionContainer>
-      <div className="mb-6 flex items-center gap-2">
-        <h2 className="text-3xl font-semibold">skills</h2>
-        <div className="h-1 w-full bg-blue-500"></div>
-      </div>
+    <SectionContainer title="skills">
       <div className="flex flex-wrap items-center justify-center gap-12">
         {skills.map((skill) => (
           <div className="flex flex-col items-center" key={skill.name}>
