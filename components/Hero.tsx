@@ -1,6 +1,5 @@
 import React from "react";
-import { DiGithubBadge } from "react-icons/di";
-import { AiFillLinkedin, AiFillMail } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 
 const Hero = () => {
   return (
@@ -12,21 +11,21 @@ const Hero = () => {
         </div>
         <div className="mt-4 flex space-x-4">
           <a
-            className="cursor-pointer text-blue-400 transition-colors hover:text-gray-200"
+            className="cursor-pointer text-blue-400 transition-colors hover:scale-105 hover:text-gray-200"
             aria-label="Github profile"
             href="https://github.com/matews-sousa"
             target="_blank"
           >
-            <DiGithubBadge className="h-10 w-10" />
+            <AiFillGithub className="h-10 w-10" />
           </a>
           <a
-            className="cursor-pointer text-blue-400 transition-colors hover:text-gray-200"
+            className="cursor-pointer text-blue-400 transition-colors hover:scale-105 hover:text-gray-200"
             aria-label="Linkedin profile"
           >
             <AiFillLinkedin className="h-10 w-10" />
           </a>
           <a
-            className="cursor-pointer text-blue-400 transition-colors hover:text-gray-200"
+            className="cursor-pointer text-blue-400 transition-colors hover:scale-105 hover:text-gray-200"
             aria-label="Linkedin profile"
             href="mailto:mateussdamiano@gmail.com"
           >
