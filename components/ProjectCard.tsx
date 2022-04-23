@@ -26,7 +26,10 @@ const ProjectCard = ({ project }: Props) => {
         </div>
         <div className="mt-2 mb-8 flex flex-wrap gap-2 text-xs text-blue-400">
           {project.stack?.map((tech) => (
-            <p className="rounded-md border-[1px] border-blue-400 p-1">
+            <p
+              className="rounded-md border-[1px] border-blue-400 p-1"
+              key={`${tech} ${project.title}`}
+            >
               {tech}
             </p>
           ))}

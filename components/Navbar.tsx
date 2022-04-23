@@ -20,11 +20,6 @@ const Navbar = () => {
             projects
           </a>
         </Link>
-        <Link href="/#contact">
-          <a className="cursor-pointer font-medium hover:text-blue-300 hover:underline">
-            contact
-          </a>
-        </Link>
       </div>
     </nav>
   );

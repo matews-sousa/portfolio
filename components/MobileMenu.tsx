@@ -61,19 +61,6 @@ const MobileMenu = () => {
                   </Link>
                 )}
               </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <Link href="/#contact">
-                    <a
-                      className={`cursor-pointer rounded-md  p-1 shadow-md ${
-                        active ? "bg-neutral-700" : "bg-neutral-800"
-                      }`}
-                    >
-                      contact
-                    </a>
-                  </Link>
-                )}
-              </Menu.Item>
             </Menu.Items>
           </Transition>
 
