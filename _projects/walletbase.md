@@ -1,18 +1,11 @@
 ---
 title: 'WalletBase'
 excerpt: 'A Incomes and Expenses tracker, that users can add their transactions and control their general balance.'
+repositoryUrl: 'https://github.com/matews-sousa/wallet-base'
 liveUrl: 'https://wallet-base.vercel.app'
 stack: ['React.js', 'Firebase', 'styled-components']
 thumbPath: '/img/walletbase-thumb.png'
 ---
-
-A React.js application that helps users maintain their money balance.
-
-## Stack
-
-- React.js, as a frontend framework
-- Firebase, for user authentication and database
-- Styled Components, for styling reusable components
 
 ## Features
 

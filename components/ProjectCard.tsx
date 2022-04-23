@@ -20,6 +20,8 @@ const ProjectCard = ({ project }: Props) => {
           <a
             className="grid h-8 w-8 cursor-pointer place-content-center rounded-full bg-gradient-to-r from-blue-500 to-blue-400 shadow-md hover:scale-105"
             aria-label="Github repository"
+            href={project.repositoryUrl}
+            target="_blank"
           >
             <DiGithubBadge className="h-6 w-6" />
           </a>

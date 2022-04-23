@@ -15,10 +15,6 @@ interface Props {
 const Home: NextPage<Props> = ({ projects }) => {
   return (
     <Container>
-      <Head>
-        <title>Mateus Sousa</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <main>
         <Hero />
         <AboutMe />

@@ -12,7 +12,7 @@ interface Props {
 
 const ProjectPage: NextPage<Props> = ({ project }) => {
   return (
-    <Container>
+    <Container title={`Projects | ${project.title}`}>
       <div className="flex flex-col items-center justify-between space-y-4 py-16 md:flex-row md:space-y-0">
         <h1 className="text-center text-4xl font-bold text-neutral-900 dark:text-neutral-100">
           {project.title}
@@ -24,6 +24,8 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
           <a
             className="button grid h-10 w-10 place-content-center rounded-full"
             aria-label="Github repository"
+            href={project.repositoryUrl}
+            target="_blank"
           >
             <DiGithubBadge className="h-8 w-8" />
           </a>
@@ -56,15 +58,12 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
           />
         </div>
       </section>
-      {/*
-        {project.content && (
-          <div
-            dangerouslySetInnerHTML={{ __html: project.content }}
-            className="prose prose-a:text-teal-500 hover:prose-a:text-teal-400 dark:prose-invert"
-          ></div>
-        )}
-        
-        */}
+      {project.content && (
+        <section
+          dangerouslySetInnerHTML={{ __html: project.content }}
+          className="prose mx-auto mt-12 max-w-4xl prose-a:text-blue-500 hover:prose-a:text-blue-400 dark:prose-invert"
+        ></section>
+      )}
     </Container>
   );
 };

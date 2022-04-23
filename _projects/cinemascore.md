@@ -1,12 +1,11 @@
 ---
 title: 'Cinemascore'
 excerpt: 'A Movie app made with Next.js and TailwindCSS for styling. This app uses The Movie DB API to show movies, specific movie data, search and filter movies.'
+repositoryUrl: 'https://github.com/matews-sousa/movie-app'
 liveUrl: 'https://movie-app-sage.vercel.app'
 stack: ['Next.js', 'TailwindCSS']
 thumbPath: '/img/cinemascore-thumb.png'
 ---
-
-A Movie app made with Next.js, Typescript and TailwindCSS. This project was made to train my habilities in Next.js, TailwindCSS, Typescript and data fetching.
 
 ## Features
 
@@ -19,13 +18,6 @@ A Movie app made with Next.js, Typescript and TailwindCSS. This project was made
 ## Approach I Used
 
 I used Next.js to fetch The Movie DB API in the server side, this turns the rendering faster for the user. The TailwindCSS was used to maintain a pattern in the colors, spacing and responsiveness of the website.
-
-## Stack
-
-- Next.js, for Server Side Rendering
-- Typescript, for type deffinition at real time in VSCode
-- TailwindCSS, for styling 
-- The Movie DB API, for fetching movies data
 
 ## Challenges
 
