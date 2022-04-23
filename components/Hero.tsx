@@ -14,6 +14,8 @@ const Hero = () => {
           <a
             className="cursor-pointer text-blue-400 transition-colors hover:text-gray-200"
             aria-label="Github profile"
+            href="https://github.com/matews-sousa"
+            target="_blank"
           >
             <DiGithubBadge className="h-10 w-10" />
           </a>
@@ -26,6 +28,7 @@ const Hero = () => {
           <a
             className="cursor-pointer text-blue-400 transition-colors hover:text-gray-200"
             aria-label="Linkedin profile"
+            href="mailto:mateussdamiano@gmail.com"
           >
             <AiFillMail className="h-10 w-10" />
           </a>

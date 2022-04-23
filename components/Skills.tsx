@@ -1,24 +1,13 @@
 import React from "react";
-import { DiHtml5, DiCss3, DiReact, DiGit } from "react-icons/di";
-import {
-  SiNextdotjs,
-  SiStyledcomponents,
-  SiChakraui,
-  SiPrisma,
-  SiMysql,
-} from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io";
 import SectionContainer from "./SectionContainer";
+import Skill from "./Skill";
 
 const Skills = () => {
   return (
-    <SectionContainer title="skills">
-      <div className="flex flex-wrap items-center justify-center gap-12">
+    <SectionContainer title="skills" id="skills">
+      <div className="flex flex-wrap items-center justify-center gap-6">
         {skills.map((skill) => (
-          <div className="flex flex-col items-center" key={skill.name}>
-            {skill.icon}
-            <p>{skill.name}</p>
-          </div>
+          <Skill source={skill.source} name={skill.name} key={skill.name} />
         ))}
       </div>
     </SectionContainer>
@@ -29,43 +18,62 @@ export default Skills;
 
 const skills = [
   {
-    icon: <DiHtml5 className="tech-icon" />,
+    source:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     name: "HTML5",
   },
   {
-    icon: <DiCss3 className="tech-icon" />,
+    source:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     name: "CSS3",
   },
   {
-    icon: <IoLogoJavascript className="tech-icon" />,
+    source:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     name: "Javascript",
   },
   {
-    icon: <DiReact className="tech-icon" />,
+    source:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    name: "Typescript",
+  },
+  {
+    source:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    name: "TailwindCSS",
+  },
+  {
+    source:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     name: "React.js",
   },
   {
-    icon: <SiNextdotjs className="tech-icon h-24 w-24" />,
+    source:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
     name: "Next.js",
   },
   {
-    icon: <SiStyledcomponents className="tech-icon" />,
-    name: "styled-components",
+    source:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+    name: "Firebase",
   },
   {
-    icon: <SiChakraui className="tech-icon" />,
-    name: "ChakraUI",
-  },
-  {
-    icon: <SiPrisma className="tech-icon" />,
+    source: "/img/prisma-3.svg",
     name: "Prisma",
   },
   {
-    icon: <SiMysql className="tech-icon" />,
+    source:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     name: "MySQL",
   },
   {
-    icon: <DiGit className="tech-icon" />,
+    source:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     name: "Git",
+  },
+  {
+    source:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+    name: "Figma",
   },
 ];

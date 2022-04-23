@@ -19,12 +19,16 @@ const AboutMe = () => {
           </p>
           <p>
             You can view more about me in my{" "}
-            <a className="cursor-pointer text-blue-400 underline" href="">
+            <a
+              className="cursor-pointer text-blue-400 underline transition-colors hover:bg-blue-500 hover:text-white"
+              href=""
+              target="_blank"
+            >
               LinkedIn
             </a>{" "}
             or{" "}
             <a
-              className="cursor-pointer text-blue-400 underline"
+              className="cursor-pointer text-blue-400 underline transition-colors hover:bg-blue-500 hover:text-white"
               href="https://github.com/matews-sousa"
               target="_blank"
             >

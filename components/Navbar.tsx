@@ -15,6 +15,11 @@ const Navbar = () => {
             about me
           </a>
         </Link>
+        <Link href="/#skills">
+          <a className="cursor-pointer font-medium hover:text-blue-300 hover:underline">
+            skills
+          </a>
+        </Link>
         <Link href="/#projects">
           <a className="cursor-pointer font-medium hover:text-blue-300 hover:underline">
             projects

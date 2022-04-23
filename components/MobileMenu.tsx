@@ -50,6 +50,19 @@ const MobileMenu = () => {
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
+                  <Link href="/#skills">
+                    <a
+                      className={`cursor-pointer rounded-md  p-1 shadow-md ${
+                        active ? "bg-neutral-700" : "bg-neutral-800"
+                      }`}
+                    >
+                      skills
+                    </a>
+                  </Link>
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
                   <Link href="/#projects">
                     <a
                       className={`cursor-pointer rounded-md  p-1 shadow-md ${
