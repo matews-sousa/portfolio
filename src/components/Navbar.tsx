@@ -68,7 +68,7 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <li>
+          <li className="hidden sm:block">
             <a
               href="https://github.com/matews-sousa"
               target="_blank"
@@ -92,10 +92,6 @@ const Navbar = () => {
 export default Navbar;
 
 const links = [
-  {
-    href: "/#about",
-    label: "About",
-  },
   {
     href: "/#projects",
     label: "Projects",
