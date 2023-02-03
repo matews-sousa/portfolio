@@ -2,17 +2,20 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import { useTheme } from "next-themes";
-import {
-  ArrowTopRightOnSquareIcon,
-  MoonIcon,
-  SunIcon,
-} from "@heroicons/react/24/solid";
+import { BsSunFill, BsMoonFill } from "react-icons/bs";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 const Navbar = () => {
   const router = useRouter();
   const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const renderThemeChanger = () => {
+    if (!mounted) return null;
     const currentTheme = theme === "system" ? systemTheme : theme;
 
     if (currentTheme === "dark") {
@@ -21,7 +24,7 @@ const Navbar = () => {
           className="rounded-full  bg-neutral-800 p-2 text-yellow-500 ring-1 ring-gray-500"
           onClick={() => setTheme("light")}
         >
-          <SunIcon className="h-6 w-6" />
+          <BsSunFill className="h-6 w-6" />
         </button>
       );
     } else {
@@ -30,7 +33,7 @@ const Navbar = () => {
           className="rounded-full p-2 text-gray-900 ring-1 ring-gray-600"
           onClick={() => setTheme("dark")}
         >
-          <MoonIcon className="h-6 w-6" />
+          <BsMoonFill className="h-6 w-6" />
         </button>
       );
     }
@@ -73,7 +76,7 @@ const Navbar = () => {
             >
               <div className="flex items-center space-x-2">
                 <span>GitHub</span>
-                <ArrowTopRightOnSquareIcon className="h-4 w-4" />
+                <HiOutlineExternalLink className="h-4 w-4" />
               </div>
               <div className="invisible mt-1 h-[2px] w-full bg-blue-400 group-hover:visible"></div>
             </a>
