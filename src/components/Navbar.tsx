@@ -72,6 +72,7 @@ const Navbar = () => {
             <a
               href="https://github.com/matews-sousa"
               target="_blank"
+              rel="noopener noreferrer"
               className="group inline-block font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
             >
               <div className="flex items-center space-x-2">

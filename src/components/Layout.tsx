@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -13,6 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <main className="mx-auto max-w-5xl space-y-20 px-6 py-10">
         <Navbar />
         {children}
+        <Footer />
       </main>
     </>
   );
