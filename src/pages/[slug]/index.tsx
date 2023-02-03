@@ -15,7 +15,7 @@ const Project = ({
   content: MDXRemoteSerializeResult;
 }) => {
   return (
-    <article className="prose py-16 prose-img:scale-110 prose-img:rounded-md dark:prose-invert lg:prose-xl">
+    <article className="prose mx-auto py-16 prose-img:scale-110 prose-img:rounded-md dark:prose-invert lg:prose-xl">
       <img src={project.thumbPath} />
       <h1>{project.title}</h1>
       <p>{project.excerpt}</p>

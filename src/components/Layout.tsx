@@ -10,7 +10,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <meta name="description" content="Mateus Sousa's personal website" />
         <link rel="icon" href="/logo.png" />
       </Head>
-      <main className="mx-auto max-w-5xl px-6 py-10">
+      <main className="mx-auto max-w-5xl space-y-20 px-6 py-10">
         <Navbar />
         {children}
       </main>

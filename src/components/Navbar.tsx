@@ -53,7 +53,7 @@ const Navbar = () => {
                 href={href}
                 className={`group font-semibold ${
                   router.asPath === href
-                    ? "text-white"
+                    ? "text-black dark:text-white"
                     : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                 }`}
               >
@@ -92,19 +92,19 @@ export default Navbar;
 
 const links = [
   {
-    href: "/about",
+    href: "/#about",
     label: "About",
   },
   {
-    href: "/projects",
+    href: "/#projects",
     label: "Projects",
   },
   {
-    href: "/skills",
+    href: "/#skills",
     label: "Skills",
   },
   {
-    href: "/contact",
+    href: "/#contact",
     label: "Contact",
   },
 ];
