@@ -26,23 +26,23 @@ export default Skills;
 const skills = [
   {
     name: "HTML",
-    icon: "html.png",
+    icon: "html.svg",
   },
   {
     name: "CSS",
-    icon: "css.png",
+    icon: "css.svg",
   },
   {
     name: "JavaScript",
-    icon: "javascript.png",
+    icon: "javascript.svg",
   },
   {
     name: "TypeScript",
-    icon: "typescript.png",
+    icon: "typescript.svg",
   },
   {
     name: "React",
-    icon: "react.png",
+    icon: "react.svg",
   },
   {
     name: "Next",
@@ -50,18 +50,18 @@ const skills = [
   },
   {
     name: "Tailwind CSS",
-    icon: "tailwind.png",
+    icon: "tailwind.svg",
   },
   {
     name: "PostgreSQL",
-    icon: "postgresql.png",
+    icon: "postgresql.svg",
   },
   {
     name: "Prisma",
-    icon: "prisma.png",
+    icon: "prisma.svg",
   },
   {
     name: "Git",
-    icon: "git.png",
+    icon: "git.svg",
   },
 ];
