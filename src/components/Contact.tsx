@@ -1,7 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
+import emailjs from "@emailjs/browser";
+emailjs.init("QbbP30PG23jJiUN4W");
 
 const Contact = () => {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!email || !name || !message) {
+      alert("Please fill all the fields");
+      return;
+    }
+
+    const templateParams = {
+      name,
+      email,
+      message,
+    };
+
+    try {
+      await emailjs.send("service_ucqzqke", "template_3qyxf4m", templateParams);
+      alert("Message sent successfully");
+      setEmail("");
+      setName("");
+      setMessage("");
+    } catch (error) {
+      alert("Something went wrong");
+    }
+  };
+
   return (
     <section>
       <h2 className="mb-2 text-3xl font-bold text-gray-800 dark:text-white">
@@ -35,7 +66,10 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        <form className="col-span-2 grid grid-cols-2 gap-2">
+        <form
+          className="col-span-2 grid grid-cols-2 gap-2"
+          onSubmit={handleSubmit}
+        >
           <div className="flex flex-col space-y-1">
             <label htmlFor="name" className="font-semibold">
               Name
@@ -45,6 +79,8 @@ const Contact = () => {
               name="name"
               className="rounded-md border border-neutral-600 p-2 focus:border-blue-400 focus:outline-none dark:bg-neutral-800"
               placeholder="John Doe"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="flex flex-col space-y-1">
@@ -57,6 +93,8 @@ const Contact = () => {
               type="email"
               className="rounded-md border border-neutral-600 p-2 focus:border-blue-400 focus:outline-none dark:bg-neutral-800"
               placeholder="johndoe@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="col-span-2 flex flex-col space-y-1">
@@ -69,6 +107,8 @@ const Contact = () => {
               className="rounded-md border border-neutral-600 p-2 focus:border-blue-400 focus:outline-none dark:bg-neutral-800"
               placeholder="Your message..."
               rows={5}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
           </div>
           <button className="col-span-2 ml-auto flex items-center gap-1 rounded-md bg-blue-400 py-2 px-4 font-semibold text-white hover:bg-blue-600">
