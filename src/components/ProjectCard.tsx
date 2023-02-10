@@ -21,10 +21,10 @@ const ProjectCard = ({ project }: Props) => {
         <p className="my-2 text-gray-700 dark:text-neutral-300">
           {project.excerpt}
         </p>
-        <div className="mb-4 flex flex-wrap">
+        <div className="mb-4 flex flex-wrap gap-2">
           {project.stack.map((tech) => (
             <span
-              className="mr-2 rounded-md bg-gray-200 px-2 py-1 text-sm font-medium text-gray-700 dark:bg-neutral-700 dark:text-neutral-300"
+              className="rounded-md bg-gray-200 px-2 py-1 text-sm font-medium text-gray-700 dark:bg-neutral-700 dark:text-neutral-300"
               key={tech}
             >
               {tech}

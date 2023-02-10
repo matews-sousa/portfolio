@@ -1,0 +1,49 @@
+---
+title: "Chess"
+excerpt: "A Chess game where users can play online and chat in realtime."
+repositoryUrl: "https://github.com/matews-sousa/chess-game"
+liveUrl: "https://chess-game-wine.vercel.app"
+stack: ["React", "Tailwind CSS", "Supabase", "Chess.js"]
+thumbPath: "/img/chess-thumb.png"
+---
+
+## Demo
+
+Use the project at [https://chess-game-wine.vercel.app](https://chess-game-wine.vercel.app)
+
+## Features
+
+- Sign Up with email and password
+- Sign In with email and password
+- Create a online game picking the color
+- Join a room by ID
+- View all games played by the user
+- Play and chat in realtime with the oponent
+- Resign the game
+- Promote a piece picking between Bishop, Knight, Rook or Queen
+
+## Tech Stack
+
+- [Typescript](https://www.typescriptlang.org) as programming language
+- [React](https://reactjs.org) as frontend library
+- [Supabase](https://supabase.com) as BaaS (Backend as a Service)
+- [Tailwind CSS](https://tailwindcss.com) for styling
+- [Chess.js](https://github.com/jhlywa/chess.js) for validating piece movement and a game state
+- [Chessboard.jsx](https://chessboardjsx.com) for displaying a Chessboard with pieces
+
+## Approach I Used
+
+I used Supabase's realtime channels to make moves and send messages between games rooms. A user can create a game by picking the piece
+color or get a random color and share the game id with a friend to join. As soon as the other player joins, the game starts and Chess.js
+makes the moves validations, as well with Chessboard.jsx that displays a beautiful chessboard, handling drag and drop pieces.
+
+## Challenges
+
+The main challenge was to make the realtime work properlly and structuring the data of the game in the database, also making the game state
+update the right way in the client side.
+
+## What I've learned
+
+How to use Supabase's realtime channels, making a functional multiplayer game with imediat response and managing a complex game state.
+
+Also I've learned how to use the library [Chess.js](https://github.com/jhlywa/chess.js) together with [Chessboard.jsx](https://chessboardjsx.com) to validate, make moves and display them in the screen.
