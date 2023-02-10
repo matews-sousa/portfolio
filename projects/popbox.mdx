@@ -1,30 +1,38 @@
 ---
 title: "Popbox"
-excerpt: "A Movie app made with React.js and TailwindCSS for styling. This app uses The Movie DB API to show movies, specific movie data, search and filter movies."
+excerpt: "A Movie app that users can browse through Movies and TV Series."
 repositoryUrl: "https://github.com/matews-sousa/popbox"
 liveUrl: "https://popbox.vercel.app"
-stack: ["React.js", "TailwindCSS"]
+stack: ["Typescript", "React", "Tailwind CSS", "React Query"]
 thumbPath: "/img/popbox-thumb.png"
 ---
 
 ## Features
 
-- Browse through movies
-- View specific movie informations
-- View most popular, upcoming and top rated movies
-- Filter movies by category
-- Search movie
+- Browse through Movies and TV Series
+- View specific Movie or Serie informations
+- Filter movies or series by category
+- Search movies or series
+- Download media covers and posters
+
+## Stack
+
+- [Typescript](https://www.typescriptlang.org) as programming language
+- [React](https://reactjs.org) as frontend library
+- [Tailwind CSS](https://tailwindcss.com) for styling
+- [React Query](https://tanstack.com/query/latest) as state management library
 
 ## Approach I Used
 
-I used Next.js to fetch The Movie DB API in the server side, this turns the rendering faster for the user. The TailwindCSS was used to maintain a pattern in the colors, spacing and responsiveness of the website.
+I used React with Typescript and Tailwind CSS for styling.
+
+The media data is being fetched from [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction) and
+the state is being managed by [React Query](https://tanstack.com/query/latest), using advanced features like pagination.
 
 ## Challenges
 
-The main challenge was to fetch the data properlly and in a organized manner, addapting to the Typescript requirements.
+The main challenge was to use React Query the proper way, using the features with the best practices.
 
 ## What I've learned
 
-- Server Side Rendering with Next.js, using to fetch the data faster
-- Styling with TailwindCSS
-- Typescript
+I learned how to use React Query to manage state and how to use search params to keep track of filters and queries.
