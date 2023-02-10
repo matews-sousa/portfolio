@@ -1,4 +1,3 @@
-import React from "react";
 import { DiGithubBadge } from "react-icons/di";
 import { FaLinkedinIn } from "react-icons/fa";
 

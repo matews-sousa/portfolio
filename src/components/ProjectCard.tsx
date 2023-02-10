@@ -19,9 +19,10 @@ const ProjectCard = ({ project }: Props) => {
       <div className="mt-2 p-6">
         <a
           href={project.repositoryUrl}
-          className="group flex items-center gap-2 text-2xl font-semibold hover:underline"
+          target="_blank"
+          className="flex items-center gap-2 text-2xl font-semibold hover:underline"
         >
-          <GoRepo className="transition-all group-hover:-translate-y-[1px]" />
+          <GoRepo />
           <span>{project.title}</span>
         </a>
         <p className="my-2 text-gray-700 dark:text-neutral-300">

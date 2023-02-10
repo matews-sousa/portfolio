@@ -24,8 +24,8 @@ const Hero = () => {
         alt="A Rat chilling in a cup taking a selfie"
         className="col-span-1 w-full"
         loading="eager"
-        width={500}
-        height={500}
+        width={50}
+        height={50}
       />
     </section>
   );
