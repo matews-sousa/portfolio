@@ -1,6 +1,7 @@
 import React from "react";
 import { HiOutlineArrowRight, HiOutlineExternalLink } from "react-icons/hi";
 import { GoRepo } from "react-icons/go";
+import Image from "next/image";
 
 interface Props {
   project: Project;
@@ -9,7 +10,12 @@ interface Props {
 const ProjectCard = ({ project }: Props) => {
   return (
     <article className="overflow-hidden rounded-md shadow-lg dark:bg-neutral-800">
-      <img src={project.thumbPath} className="" />
+      <Image
+        width={500}
+        height={500}
+        src={project.thumbPath}
+        alt={project.title + " thumb"}
+      />
       <div className="mt-2 p-6">
         <a
           href={project.repositoryUrl}
@@ -35,7 +41,7 @@ const ProjectCard = ({ project }: Props) => {
           <a
             href={project.liveUrl}
             target="_blank"
-            className="flex items-center gap-2 rounded-md bg-blue-500 px-3 py-2 font-semibold text-white transition-all hover:-translate-y-[1px] hover:bg-blue-600"
+            className="flex items-center gap-2 rounded-md bg-blue-600 px-3 py-2 font-semibold text-white transition-all hover:-translate-y-[1px] hover:bg-blue-700"
           >
             <span>Live Demo</span>
             <HiOutlineExternalLink className="h-5 w-5" />
@@ -44,7 +50,7 @@ const ProjectCard = ({ project }: Props) => {
             href={project.slug}
             className="group flex items-center gap-2 font-medium hover:underline"
           >
-            <span className="">Read More</span>
+            <span>{project.title} Article</span>
             <HiOutlineArrowRight className="h-4 w-4 transition-all group-hover:translate-x-1" />
           </a>
         </div>

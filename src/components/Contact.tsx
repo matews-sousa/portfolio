@@ -44,7 +44,7 @@ const Contact = () => {
       <div className="grid grid-cols-1 md:grid-cols-3">
         <div className="mb-6 flex space-x-6 md:m-0 md:block md:space-x-0 md:space-y-4">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-widest text-blue-500">
+            <p className="text-sm font-semibold uppercase tracking-widest text-blue-700 dark:text-blue-500">
               Email
             </p>
             <a
@@ -55,7 +55,7 @@ const Contact = () => {
             </a>
           </div>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-widest text-blue-500">
+            <p className="text-sm font-semibold uppercase tracking-widest text-blue-700 dark:text-blue-500">
               LinkedIn
             </p>
             <a
@@ -111,7 +111,7 @@ const Contact = () => {
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
-          <button className="col-span-2 ml-auto flex items-center gap-1 rounded-md bg-blue-400 py-2 px-4 font-semibold text-white hover:bg-blue-600">
+          <button className="col-span-2 ml-auto flex items-center gap-1 rounded-md bg-blue-600 py-2 px-4 font-semibold text-white hover:bg-blue-700">
             <span>Send</span>
             <BsArrowRightShort className="h-6 w-6" />
           </button>

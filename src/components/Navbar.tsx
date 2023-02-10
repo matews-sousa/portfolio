@@ -24,7 +24,7 @@ const Navbar = () => {
           className="rounded-full  bg-neutral-800 p-2 text-yellow-500 ring-1 ring-gray-500"
           onClick={() => setTheme("light")}
         >
-          <BsSunFill className="h-6 w-6" />
+          <BsSunFill className="h-6 w-6" aria-label="dark mode" />
         </button>
       );
     } else {
@@ -33,7 +33,7 @@ const Navbar = () => {
           className="rounded-full p-2 text-gray-900 ring-1 ring-gray-600"
           onClick={() => setTheme("dark")}
         >
-          <BsMoonFill className="h-6 w-6" />
+          <BsMoonFill className="h-6 w-6" aria-label="light mode" />
         </button>
       );
     }

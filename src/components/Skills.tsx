@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Skills = () => {
@@ -12,7 +13,14 @@ const Skills = () => {
             key={name}
             className="flex h-32 w-32 flex-col items-center justify-center gap-2 rounded-full p-2 shadow-md ring-1 ring-neutral-200 hover:-translate-y-1 dark:bg-neutral-700 dark:ring-0"
           >
-            <img src={`/img/logos/${icon}`} className="w-1/2" />
+            <Image
+              src={`/img/logos/${icon}`}
+              alt={`${name}`}
+              aria-hidden="true"
+              className="w-1/2"
+              width={50}
+              height={50}
+            />
             <h3 className="font-semibold">{name}</h3>
           </div>
         ))}
