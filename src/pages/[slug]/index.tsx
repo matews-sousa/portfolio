@@ -6,6 +6,7 @@ import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote";
 import { MDXRemoteSerializeResult } from "next-mdx-remote/dist";
 import { serialize } from "next-mdx-remote/serialize";
+import Image from "next/image";
 
 const Project = ({
   project,
@@ -16,7 +17,14 @@ const Project = ({
 }) => {
   return (
     <article className="prose mx-auto prose-a:text-blue-500 hover:prose-a:bg-blue-500 hover:prose-a:text-white prose-img:scale-100 prose-img:rounded-md dark:prose-invert md:prose-img:scale-110 lg:prose-xl">
-      <img src={project.thumbPath} />
+      <Image
+        src={project.thumbPath}
+        alt={`${project.title} thumbnail`}
+        className="w-full"
+        loading="eager"
+        width={1200}
+        height={768}
+      />
       <h1>{project.title}</h1>
       <p>{project.excerpt}</p>
       <MDXRemote {...content} />
