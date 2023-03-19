@@ -17,7 +17,7 @@ const Skills = () => {
               src={`/img/logos/${icon}`}
               alt={`${name}`}
               aria-hidden="true"
-              className="w-1/2"
+              className="h-10 w-10"
               width={50}
               height={50}
             />
@@ -67,6 +67,14 @@ const skills = [
   {
     name: "Prisma",
     icon: "prisma.svg",
+  },
+  {
+    name: "Ruby",
+    icon: "ruby.svg",
+  },
+  {
+    name: "Ruby on Rails",
+    icon: "rails-1.svg",
   },
   {
     name: "Git",

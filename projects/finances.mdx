@@ -1,33 +1,43 @@
 ---
 title: "Finances"
 excerpt: "A fullstack application that users can add their transactions and control their general balance."
-repositoryUrl: "https://github.com/matews-sousa/expense-tracker-client"
-liveUrl: "https://expense-tracker-client-ruby.vercel.app"
-stack: ["React.js", "TailwindCSS", "Django"]
+repositoryUrl: "https://github.com/matews-sousa/expense-tracker"
+liveUrl: "https://finances-expense-tracker.fly.dev"
+stack: ["Ruby on Rails", "Tailwind CSS"]
 thumbPath: "/img/finances-thumb.png"
 ---
 
 ## Features
 
-- Authenticate with email and password
-- Register incomes and expenses categories
-- Register transactions made
-- View charts about all transactions
+The Finances project is designed to help users manage their transactions by allowing them to register their transactions with categories and view statistics about them. The key features of this project include:
 
-## Approach I Used
+- User authentication: Users can create an account, log in, and manage their transactions.
+- Transaction management: Users can register their transactions with categories such as income and expenses.
+- Dashboard: Users can view statistics about their transactions, including total income and total expenses.
+- Categories management: Users can manage their transaction categories, including adding, updating, and deleting them.
 
-I used Django REST Framework as backend technology and React.js with TailwindCSS as the frontend stack.
+## Approach I used
 
-The Django API is hosted at [Expense Tracker API](https://expense-tracker-api-production-8f04.up.railway.app).
+To build this project, I used the Ruby on Rails framework, which provides a solid foundation for building web applications. I used ActiveRecord to manage the database, Devise for user authentication, and Chartkick for generating charts and graphs to display the transaction statistics.
 
-You can check the [API Repository at GitHub](https://github.com/matews-sousa/expense-tracker-api).
+I started by setting up the database schema and models to manage the transactions and categories. Next, I implemented the user authentication using Devise, which provides a simple and secure way to manage user accounts.
+
+Then, I built the dashboard page that displays the transaction statistics using Chartkick. I used the ActiveRecord queries to fetch the required data from the database and generate charts and graphs.
+
+Finally, I implemented the categories management functionality, which allows users to manage their transaction categories.
+
+## Deployment
+
+To deploy the application, I used Fly.io, a modern platform for deploying and scaling applications. Fly.io provides a simple and intuitive interface for managing deployments and scaling, as well as a reliable and fast network for serving web traffic.
+
+I used the Fly.io CLI to configure and deploy the application, which was a straightforward and painless process. Fly.io automatically handles load balancing and scaling, ensuring that the application remains performant and available even under heavy traffic.
 
 ## Challenges
 
-The main challenge was to handle the data that was being inserted into the database, to facilitate the showing the statistics in the user dashboard.
+The main challenge I faced while building this project was managing the complex relationships between the user, transactions, and categories. I had to ensure that the data was properly structured in the database and that the queries used to fetch the data were efficient and scalable.
+
+Another challenge was designing the user interface for the dashboard page. I had to balance the need for displaying a lot of information with the need for keeping the page simple and easy to navigate.
 
 ## What I've learned
 
-- Django REST Framework
-- JWT authentication with Django
-- TailwindCSS for styling
+Building this project taught me a lot about working with Ruby on Rails, managing databases, and designing user interfaces. I learned how to use ActiveRecord to manage complex relationships between models, how to use Devise to implement user authentication, and how to use Chartkick to generate charts and graphs.
