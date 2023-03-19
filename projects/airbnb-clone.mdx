@@ -1,0 +1,54 @@
+---
+title: "Airbnb Clone"
+excerpt: "A Airbnb Clone application where users can reserve a place and become hosts."
+repositoryUrl: "https://github.com/matews-sousa/airbnb-clone"
+liveUrl: "https://airbnb-clone-q3wt.onrender.com"
+stack: ["Ruby on Rails", "Tailwind CSS", "Stripe"]
+thumbPath: "/img/airbnb-clone-thumb.png"
+---
+
+## Features
+
+An Airbnb clone would require a set of features that are commonly found in the original application, including:
+
+- User authentication and authorization
+- Property listings with photos, descriptions, and pricing
+- A booking system that allows users to request reservations and communicate with the property owner
+- A payment system that handles transactions and fees
+- And others functionalities like: reviews, favorites and canceling reservation
+
+## Stack
+
+- [Ruby on Rails](https://rubyonrails.org): a web application framework built on top of Ruby that provides a structure for building web applications;
+- [RSpec](https://rspec.info): a testing library for Ruby;
+- [Tailwind CSS](https://tailwindcss.com): a utility-first CSS framework;
+- [Stripe](https://stripe.com): a infrastrucute for secure payments and transactions;
+- [Stimulus](https://stimulus.hotwired.dev): a simple JavaScript framework
+
+## Approach
+
+I started seting up the Rails project structure, with RSpec tests, Tailwind and Stimulus. Building a secure user authentication with
+the Devise gem.
+
+After this, I implemented the Google Places API in the creation of a Property to help users search a address and populate the data
+automatically. Along with this, I added the possibility of uploading multiple images using Active Storage.
+
+And the main feature of payments and reservations was implemented using Stripe, where all the users are a Stripe Customer and a regular
+user can become a host by creating a Stripe account. The flow of payment and becoming a host are handled by Stripe and when the users
+finishes the process, the application receives a Webhook call and update the user and reservation information with status like "pending",
+"paid" or "canceled".
+
+## Challenges
+
+The biggest challenge I faced was to integrate Stripe with my application in a satisfactory way, and figure out how to use webhooks for a
+better user experience.
+
+## What I've Learned
+
+Building an Airbnb clone with Ruby on Rails was a great learning experience. I learned a lot about working with Stripe and Webhooks,
+they are great tools for implementing a good and secure user experience.
+
+I learned a lot about TDD (Test Driven Development), throught the development I built many tests with with RSpec and saw the necessity
+of writing good tests cases along with testing every time to ensure that the application still working.
+
+I also gained a better understanding of how to structure and organize a Rails application for scalability and maintainability, as well as how to handle common challenges that arise when building web applications. Overall, building an Airbnb clone with Ruby on Rails was a challenging but rewarding project that helped me to grow as a developer.
