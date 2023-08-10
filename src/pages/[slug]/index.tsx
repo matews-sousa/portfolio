@@ -28,12 +28,14 @@ const Project = ({
       <h1>{project.title}</h1>
       <p>{project.excerpt}</p>
       <ul>
-        <li>
-          View the project live at{" "}
-          <a href={project.liveUrl} target="_blank">
-            {project.liveUrl}
-          </a>
-        </li>
+        {project.liveUrl && (
+          <li>
+            View the project live at{" "}
+            <a href={project.liveUrl} target="_blank">
+              {project.liveUrl}
+            </a>
+          </li>
+        )}
         <li>
           View the project repository at{" "}
           <a href={project.repositoryUrl} target="_blank">

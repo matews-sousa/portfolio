@@ -39,14 +39,23 @@ const ProjectCard = ({ project }: Props) => {
           ))}
         </div>
         <div className="flex gap-4">
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            className="flex items-center gap-2 rounded-md bg-blue-600 px-3 py-2 font-semibold text-white transition-all hover:-translate-y-[1px] hover:bg-blue-700"
-          >
-            <span>Live Demo</span>
-            <HiOutlineExternalLink className="h-5 w-5" />
-          </a>
+          {project.liveUrl ? (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              className="flex items-center gap-2 rounded-md bg-blue-600 px-3 py-2 font-semibold text-white transition-all hover:-translate-y-[1px] hover:bg-blue-700"
+            >
+              <span>Live Demo</span>
+              <HiOutlineExternalLink className="h-5 w-5" />
+            </a>
+          ) : (
+            <button
+              disabled
+              className="flex items-center gap-2 rounded-md bg-blue-600 px-3 py-2 font-semibold text-white disabled:opacity-50"
+            >
+              Demo Unavailable
+            </button>
+          )}
           <a
             href={project.slug}
             className="group flex items-center gap-2 font-medium hover:underline"
