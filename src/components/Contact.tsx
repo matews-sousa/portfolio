@@ -1,7 +1,6 @@
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 import { BsArrowRightShort } from "react-icons/bs";
-import emailjs from "@emailjs/browser";
-emailjs.init("QbbP30PG23jJiUN4W");
 
 const Contact = () => {
   const [email, setEmail] = useState("");
@@ -16,20 +15,20 @@ const Contact = () => {
       return;
     }
 
-    const templateParams = {
-      name,
-      email,
-      message,
-    };
-
     try {
-      await emailjs.send("service_ucqzqke", "template_3qyxf4m", templateParams);
-      alert("Message sent successfully");
+      const res = await fetch("/api/send", {
+        method: "POST",
+        body: JSON.stringify({ name, email, message }),
+      });
+      const data = await res.json();
+      console.log(data);
+
+      toast.success("Message successfully sent");
       setEmail("");
       setName("");
       setMessage("");
     } catch (error) {
-      alert("Something went wrong");
+      toast.error("Something went wrong");
     }
   };
 
