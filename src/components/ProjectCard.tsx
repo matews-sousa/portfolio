@@ -8,6 +8,8 @@ interface Props {
 }
 
 const ProjectCard = ({ project }: Props) => {
+  if (project.liveUrl === "") return null;
+
   return (
     <article className="overflow-hidden rounded-md shadow-lg dark:bg-neutral-800">
       <Image
