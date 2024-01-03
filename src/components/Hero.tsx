@@ -20,7 +20,7 @@ const Hero = () => {
         </p>
       </div>
       <Image
-        src="/chilling.svg"
+        src="/Cat astronaut-pana.svg"
         alt="A Rat chilling in a cup taking a selfie"
         className="col-span-1 w-full"
         loading="eager"

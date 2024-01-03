@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { BsArrowRightShort } from "react-icons/bs";
+import { CgSpinner } from "react-icons/cg";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -15,6 +17,7 @@ const Contact = () => {
       return;
     }
 
+    setIsSubmitting(true);
     try {
       const res = await fetch("/api/send", {
         method: "POST",
@@ -30,10 +33,11 @@ const Contact = () => {
     } catch (error) {
       toast.error("Something went wrong");
     }
+    setIsSubmitting(false);
   };
 
   return (
-    <section>
+    <section id="contact">
       <h2 className="mb-2 text-3xl font-bold text-gray-800 dark:text-white">
         Contact
       </h2>
@@ -110,9 +114,16 @@ const Contact = () => {
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
-          <button className="col-span-2 ml-auto flex items-center gap-1 rounded-md bg-blue-600 py-2 px-4 font-semibold text-white hover:bg-blue-700">
+          <button
+            disabled={isSubmitting}
+            className="col-span-2 ml-auto flex items-center gap-1 rounded-md bg-blue-600 py-2 px-4 font-semibold text-white hover:bg-blue-700 disabled:cursor-default disabled:opacity-75 disabled:hover:bg-blue-600"
+          >
             <span>Send</span>
-            <BsArrowRightShort className="h-6 w-6" />
+            {isSubmitting ? (
+              <CgSpinner className="animate-spin" />
+            ) : (
+              <BsArrowRightShort className="h-6 w-6" />
+            )}
           </button>
         </form>
       </div>
