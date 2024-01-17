@@ -45,7 +45,7 @@ const ProjectCard = ({ project }: Props) => {
             <a
               href={project.liveUrl}
               target="_blank"
-              className="flex items-center gap-2 rounded-md bg-blue-600 px-3 py-2 font-semibold text-white transition-all hover:-translate-y-[1px] hover:bg-blue-700"
+              className="flex items-center gap-2 rounded-md bg-blue-600 px-3 py-2 font-semibold text-white transition-all hover:bg-blue-700"
             >
               <span>Live Demo</span>
               <HiOutlineExternalLink className="h-5 w-5" />

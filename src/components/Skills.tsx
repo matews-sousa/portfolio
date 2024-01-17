@@ -11,7 +11,7 @@ const Skills = () => {
         {skills.map(({ name, icon }) => (
           <div
             key={name}
-            className="flex h-32 w-32 flex-col items-center justify-center gap-2 rounded-full p-2 shadow-md ring-1 ring-neutral-200 hover:-translate-y-1 dark:bg-neutral-700 dark:ring-0"
+            className="flex h-32 w-32 flex-col items-center justify-center gap-2 rounded-md p-2 shadow-md ring-1 ring-neutral-100 hover:-translate-y-1 dark:bg-neutral-800 dark:ring-0"
           >
             <Image
               src={`/img/logos/${icon}`}
@@ -21,7 +21,7 @@ const Skills = () => {
               width={50}
               height={50}
             />
-            <h3 className="font-semibold">{name}</h3>
+            <h3 className="font-medium">{name}</h3>
           </div>
         ))}
       </div>

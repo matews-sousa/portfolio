@@ -14,7 +14,7 @@ const Hero = () => {
         <p className="mt-2 text-sm font-semibold text-neutral-500 dark:text-neutral-400 md:text-lg">
           Welcome to my personal portfolio.
         </p>
-        <p className="m-0 mt-6 mb-6 text-sm font-medium md:w-3/4 md:text-lg">
+        <p className="m-0 mt-6 mb-6 text-sm md:w-3/4 md:text-lg">
           I'm a Web Developer from Brazil. Software Engeneering student at
           Federal University of Ceará.
         </p>
